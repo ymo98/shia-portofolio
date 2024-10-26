@@ -23,11 +23,12 @@
 
 html {
   font-family: "Montserrat", sans-serif;
+  background: white;
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: white;
 }
 
 .the-nav-button {
