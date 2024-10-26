@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --main: #141414;
+  --purp: #5d43bb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat.ttf");
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+.the-nav-button {
+  background-color: var(--main);
+  border: 1px solid var(--main);
+  border-radius: 32px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 1.4rem;
+  transition: background-color ease .55s,color ease .35s,border ease .55s;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.the-nav-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* .the-nav-link:after {
+  background-color: #5d43bb;
+  border-radius: 50%;
+  content: "";
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 12px;
+  margin-left: 23px;
+  margin-top: 5px;
+  width: 12px
+} */
+
+.the-nav-link {
+  position: relative;
+}
+
+.the-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px; /* Position underline 6px below the text */
+  width: 0;
+  height: 1px;
+  background-color: black;
+  transition: width 0.5s ease;
+  transform: translateX(-50%); /* Center the underline */
+  transform-origin: center; /* Set origin to center for expanding effect */
+}
+
+/* On hover, animate underline to full width */
+.the-nav-link:hover::after {
+  width: 100%;
+}
+
+.header-title {
+  font-size: 2.92vw;
+  padding-top: 204px;
+  padding-bottom: 163px;
+  padding: 12.5% 14% 5.9%;
+  text-align: center;
+  position: relative;
+}
+
+.title-link {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--purp);
+}
+
+.title-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px; /* Position underline 6px below the text */
+  width: 0;
+  height: 2px;
+  background-color: var(--purp);
+  transition: width 0.5s ease;
+  transform: translateX(-50%); /* Center the underline */
+  transform-origin: center; /* Set origin to center for expanding effect */
+}
+
+.nav-link-width-full {
+  position: relative;
+}
+
+.nav-link-width-full::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px; /* Position underline 6px below the text */
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  /* transition: width 0.5s ease; */
+  transform: translateX(-50%); /* Center the underline */
+  transform-origin: center; /* Set origin to center for expanding effect */
+}
+
+/* On hover, animate underline to full width */
+.title-link:hover::after {
+  width: 100%;
+}
+
+.btn-video-play {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background-color: rgba(255,255,255,.3);
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 9.5rem;
+  opacity: 0;
+  -webkit-transition: opacity .7s,-webkit-transform .35s,-webkit-backdrop-filter .35s;
+  transition: opacity .7s,-webkit-transform .35s,-webkit-backdrop-filter .35s;
+  -o-transition: opacity .7s,transform .35s,backdrop-filter .35s;
+  transition: opacity .7s,transform .35s,backdrop-filter .35s;
+  transition: opacity .7s,transform .35s,backdrop-filter .35s,-webkit-transform .35s,-webkit-backdrop-filter .35s;
+  position: absolute;
+  width: 9.5rem;
+  z-index: 10000;
+}
+.icon-triangle{
+  border-style:solid;
+  border-width:12px 0 12px 20px;
+  border-color:transparent transparent transparent #141414;
+  margin-left:7px;
+  height:50px;
+  -webkit-transition:-webkit-transform .35s;
+  transition:-webkit-transform .35s;
+  -o-transition:transform .35s;
+  transition:transform .35s;
+  transition:transform .35s,-webkit-transform .35s;
+  width: 50px ;
+}
