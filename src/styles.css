@@ -32,8 +32,8 @@ body {
 }
 
 .the-nav-button {
-  background-color: var(--main);
-  border: 1px solid var(--main);
+  background-color: #141414;
+  border: 1px solid #141414;
   border-radius: 32px;
   color: white;
   display: flex;
@@ -102,7 +102,7 @@ body {
   position: relative;
   cursor: pointer;
   font-weight: bold;
-  color: var(--purp);
+  color: #5d43bb;
 }
 
 .title-link::after {
@@ -112,7 +112,7 @@ body {
   bottom: -6px; /* Position underline 6px below the text */
   width: 0;
   height: 2px;
-  background-color: var(--purp);
+  background-color: #5d43bb;
   transition: width 0.5s ease;
   transform: translateX(-50%); /* Center the underline */
   transform-origin: center; /* Set origin to center for expanding effect */
