@@ -2,15 +2,14 @@ import { StrictMode } from "react";
 import * as ReactDOMClient from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import { inject } from "@vercel/analytics";
-
-inject();
+import { Analytics } from "@vercel/analytics/react";
 
 function AppWithUI() {
   return (
     <StrictMode>
       <BrowserRouter>
         <App />
+        <Analytics />
       </BrowserRouter>
     </StrictMode>
   );
