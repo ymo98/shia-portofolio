@@ -26,7 +26,7 @@ export function Gallery({ category, alt, title, titleWidth, photos }: Props) {
     <motion.article
       initial="hidden"
       animate="visible"
-      exit={{ opacity: 0, transition: { duration: 0.75 } }}
+      exit={{ opacity: 0, transition: { duration: 0.5 } }}
     >
       <motion.h1
         style={{ "--base-width": `${titleWidth}vw`, x: "-50%" } as any}

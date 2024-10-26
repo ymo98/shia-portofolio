@@ -10,7 +10,7 @@ export const Navbar = () => {
       <motion.a
         variants={{
           hidden: { opacity: 0, y: 0 },
-          visible: { opacity: 1, y: 0, transition: { duration: 0.75 } },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
         }}
         className="w-[5.2rem] cursor-pointer"
         onClick={() => navigate("/")}
@@ -21,7 +21,7 @@ export const Navbar = () => {
         <motion.a
           variants={{
             hidden: { opacity: 0, y: 0 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.75 } },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
           }}
           className={`font-medium cursor-pointer ${
             location.pathname === "/our-work"
@@ -36,7 +36,7 @@ export const Navbar = () => {
           onClick={() => navigate("/services")}
           variants={{
             hidden: { opacity: 0, y: 0 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.75 } },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
           }}
           className={`font-medium cursor-pointer ${
             location.pathname === "/services"
@@ -49,7 +49,7 @@ export const Navbar = () => {
         <motion.a
           variants={{
             hidden: { opacity: 0, y: 0 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.75 } },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
           }}
           className={`font-medium cursor-pointer ${
             location.pathname === "/faq"
@@ -63,7 +63,7 @@ export const Navbar = () => {
         <motion.a
           variants={{
             hidden: { opacity: 0, y: 0 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.75 } },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
           }}
           className={`font-medium cursor-pointer ${
             location.pathname === "/about-us"
@@ -77,7 +77,7 @@ export const Navbar = () => {
         <motion.a
           variants={{
             hidden: { opacity: 0, y: 0 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.75 } },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
           }}
           className="the-nav-button font-medium cursor-pointer"
           onClick={() => navigate("/start-a-project")}

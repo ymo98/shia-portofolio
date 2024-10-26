@@ -180,3 +180,34 @@ body {
   transition:transform .35s,-webkit-transform .35s;
   width: 50px ;
 }
+
+.the-approach-link {
+  position: relative;
+}
+
+.the-approach-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0; /* Position underline 6px below the text */
+  width: 0;
+  height: 1px;
+  background-color: black;
+  transition: all 0.5s ease;
+  transform: translateX(-50%); /* Center the underline */
+  transform-origin: center; /* Set origin to center for expanding effect */
+}
+
+/* On hover, animate underline to full width */
+.the-approach-link:hover::after {
+  width: 100%;
+}
+
+.the-approach-link:hover {
+  color: black;
+  transition: all 0.5s ease;
+}
+
+.the-current-approach {
+  color: black;
+}
