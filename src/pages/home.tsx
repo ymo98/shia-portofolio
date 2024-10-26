@@ -6,14 +6,14 @@ export const Home = () => {
     <motion.article
       initial="hidden"
       animate="visible"
-      exit={{ opacity: 0, transition: { duration: 1 } }}
+      exit={{ opacity: 0, transition: { duration: 0.75 } }}
     >
       <Navbar />
       <div className="flex justify-center items-center h-[55vh]">
         <motion.h1
           variants={{
             hidden: { opacity: 0, y: -20 },
-            visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.75 } },
           }}
           className="header-title"
         >
@@ -22,7 +22,7 @@ export const Home = () => {
           <motion.span
             initial={{ scale: 0.5 }}
             animate={{ scale: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.75 }}
             className="title-link"
           >
             branding
@@ -35,7 +35,7 @@ export const Home = () => {
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 0 },
-          visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.75 } },
         }}
         className="px-[70px] mt-[50px] relative"
       >

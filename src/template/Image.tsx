@@ -28,8 +28,8 @@ export function Image({ alt, category, index, aspectRatio }: Props) {
               visible: {
                 opacity: 1,
                 y: 0,
-                transition: { delay: 0.5, duration: 1, ease }
-              }
+                transition: { delay: 0.5, duration: 0.75, ease },
+              },
             }
           : undefined
       }
@@ -40,7 +40,7 @@ export function Image({ alt, category, index, aspectRatio }: Props) {
       <motion.h2
         style={{ y }}
         initial={{ x: 100 }}
-        animate={{ x: 0, transition: { delay: 0.5, duration: 1, ease } }}
+        animate={{ x: 0, transition: { delay: 0.5, duration: 0.75, ease } }}
       >{`#00${index}`}</motion.h2>
     </motion.section>
   );
