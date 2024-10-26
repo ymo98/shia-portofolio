@@ -24,7 +24,7 @@ export const Home = () => {
       exit={{ opacity: 0, transition: { duration: 0.6 } }}
     >
       <Navbar />
-      <div className="flex justify-center items-center h-[55vh]">
+      <div className="flex justify-center items-center h-full w-full header-container">
         <motion.h1
           variants={{
             hidden: { opacity: 0, y: -20 },
@@ -186,9 +186,9 @@ export const Home = () => {
                 )}
               </AnimatePresence>
             </div>
-            <div className="flex-1">
-              <div className="flex gap-x-[4rem] w-full flex-1">
-                <div className="flex flex-col items-center relative">
+            <div className="flex-1 h-[50vh] flex flex-col">
+              <div className="flex gap-x-[4rem] w-full mt-[100px]">
+                <div className="h-full">
                   <a
                     className={`text-[#b6b6b6] ${
                       currentApproach === "Discover"
@@ -273,7 +273,7 @@ export const Home = () => {
                   )}
                 </div>
               </div>
-              <div className="flex-1 mt-[20px]">
+              <div>
                 <AnimatePresence mode="wait">
                   {currentApproach === "Discover" && (
                     <motion.p
