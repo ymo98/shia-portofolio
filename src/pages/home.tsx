@@ -188,7 +188,7 @@ export const Home = () => {
             </div>
             <div className="flex-1 h-[50vh] flex flex-col">
               <div className="flex gap-x-[4rem] w-full mt-[100px]">
-                <div className="h-full">
+                <div className="flex flex-col items-center relative">
                   <a
                     className={`text-[#b6b6b6] ${
                       currentApproach === "Discover"
@@ -201,6 +201,7 @@ export const Home = () => {
                   </a>
                   {currentApproach === "Discover" && (
                     <motion.div
+                      key="discover"
                       transition={{ duration: 0.25 }} // Transition duration
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
@@ -222,6 +223,7 @@ export const Home = () => {
                   </a>
                   {currentApproach === "Strategise" && (
                     <motion.div
+                      key="strategise"
                       transition={{ duration: 0.25 }} // Transition duration
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
