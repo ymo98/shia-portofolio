@@ -8,6 +8,7 @@ import AboutUs from "./pages/about-us";
 import FAQ from "./pages/faq";
 import StartAProject from "./pages/start-a-project";
 import OurWork from "./pages/our-work";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const element = useRoutes([
@@ -44,6 +45,7 @@ export default function App() {
   return (
     <AnimatePresence mode="wait">
       {React.cloneElement(element, { key: location.pathname })}
+      <Analytics />
     </AnimatePresence>
   );
 }
