@@ -101,7 +101,7 @@ body {
   -o-transition: filter .4s ease-in-out,color .4s ease-in-out;
   transition: filter .4s ease-in-out,color .4s ease-in-out;
   transition: filter .4s ease-in-out,color .4s ease-in-out,-webkit-filter .4s ease-in-out;
-  width: 204px
+  width: 204px;
 }
 
 .the-nav-button {

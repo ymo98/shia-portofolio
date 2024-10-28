@@ -5,6 +5,7 @@ import Study2 from "../lottie/Study-2.json";
 import Study3 from "../lottie/Study-3.json";
 import Study4 from "../lottie/Study-4.json";
 import Study5 from "../lottie/Study-5.json";
+import Work from "../lottie/Work.json";
 import Lottie from "lottie-react";
 import { useState } from "react";
 
@@ -425,6 +426,9 @@ export const Home = () => {
             <div className="moving-dot" />
           </div>
         </div>
+      </div>
+      <div className="bg-[#FFFFFF] w-full px-[150px] py-[100px]">
+        <Lottie animationData={Work} />
       </div>
     </motion.article>
   );
