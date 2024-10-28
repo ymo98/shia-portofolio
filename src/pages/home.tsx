@@ -430,6 +430,31 @@ export const Home = () => {
       <div className="bg-[#FFFFFF] w-full px-[150px] py-[100px]">
         <Lottie animationData={Work} />
       </div>
+      <div className="bg-[#FFFFFF] grid grid-cols-2 px-[150px] pb-[200px] gap-x-[60px]">
+        <div>
+          <p className="text-[#000000] font-bold text-[56px] text-center">
+            We are passionate
+          </p>
+        </div>
+        <div className="mt-[20px] flex flex-col gap-y-[20px]">
+          <p className="text-[#000000] text-[20px] leading-9">
+            Overcoming expectations is our mission. We’re here to follow your
+            vision and extend it into one consistent product. You got all
+            according to our agreement, and some more.
+          </p>
+          <p className="text-[#000000] text-[20px] leading-9">
+            The process based on a customer-centric approach. Nowadays brand
+            communication should be something that people really want to be
+            involved in. Understanding and vibing your audience is what we’re
+            here for.
+          </p>
+          <p className="text-[#000000] text-[20px] leading-9">
+            It may be not easy and time-consuming, but we don’t look for short
+            ways. We’re lordly of our mission and it’s this attitude that
+            defines us.
+          </p>
+        </div>
+      </div>
     </motion.article>
   );
 };
