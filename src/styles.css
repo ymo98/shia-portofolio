@@ -41,6 +41,69 @@ body {
   background: white;
 }
 
+@keyframes movingDot {
+  from {
+      -webkit-transform: rotate(120deg) translate(-102px) rotate(120deg);
+      transform: rotate(120deg) translate(-102px) rotate(120deg);
+      will-change: transform
+  }
+
+  to {
+      -webkit-transform: rotate(480deg) translate(-102px) rotate(-480deg);
+      transform: rotate(480deg) translate(-102px) rotate(-480deg);
+      will-change: transform
+  }
+}
+
+.moving-dot {
+  background-color: #5d43bb;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  top: 92px;
+  left: 92px;
+  -webkit-animation: movingDot 3.5s infinite linear;
+  animation: movingDot 3.5s infinite linear
+}
+
+.btn-load-more {
+  cursor: pointer;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid #e4e4e4;
+  border-radius: 50%;
+  color: #FFFFFF;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 20px;
+  font-weight: 700;
+  height: 204px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  -webkit-transition: color .4s ease-in-out,-webkit-filter .4s ease-in-out;
+  transition: color .4s ease-in-out,-webkit-filter .4s ease-in-out;
+  -o-transition: filter .4s ease-in-out,color .4s ease-in-out;
+  transition: filter .4s ease-in-out,color .4s ease-in-out;
+  transition: filter .4s ease-in-out,color .4s ease-in-out,-webkit-filter .4s ease-in-out;
+  width: 204px
+}
+
 .the-nav-button {
   background-color: #141414;
   border: 1px solid #141414;

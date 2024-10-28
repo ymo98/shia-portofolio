@@ -12,6 +12,9 @@ export const Home = () => {
   const [currentApproach, setCurrentApproach] = useState<
     "Discover" | "Strategise" | "Structure" | "Create" | "Emote"
   >("Discover");
+  const [currentCategory, setCurrentCategory] = useState<
+    "All" | "Web design" | "Mobile app" | "Branding"
+  >("All");
   const variants = {
     hidden: { scale: 0, opacity: 0 }, // Hidden state
     visible: { scale: 1, opacity: 1 }, // Visible state
@@ -342,7 +345,86 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <div className="h-[20vh]"></div>
+      </div>
+      <div className="px-[150px] py-[250px] bg-[#141414]">
+        <div className="flex gap-x-20">
+          <div className="flex flex-col items-center relative">
+            {currentCategory === "All" && (
+              <motion.div
+                transition={{ duration: 0.25 }} // Transition duration
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0, transition: { duration: 0.5 } }}
+                className="bg-[#5d43bb] w-[15px] h-[15px] rounded-full absolute top-[-20px]"
+              />
+            )}
+            <a
+              onClick={() => setCurrentCategory("All")}
+              className={`${
+                currentCategory === "All" ? "text-[#FFFFFF]" : "text-[#BABABA]"
+              } hover:text-[#FFFFFF] font-medium text-[22px] cursor-pointer`}
+            >
+              All
+            </a>
+          </div>
+          <div className="flex flex-col items-center relative">
+            {currentCategory === "Web design" && (
+              <motion.div
+                transition={{ duration: 0.25 }} // Transition duration
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0, transition: { duration: 0.5 } }}
+                className="bg-[#5d43bb] w-[15px] h-[15px] rounded-full absolute top-[-20px]"
+              />
+            )}
+            <a
+              onClick={() => setCurrentCategory("Web design")}
+              className={`${
+                currentCategory === "Web design"
+                  ? "text-[#FFFFFF]"
+                  : "text-[#BABABA]"
+              } hover:text-[#FFFFFF] font-medium text-[22px] cursor-pointer`}
+            >
+              Web design
+            </a>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-x-[100px] gap-y-[40px] mt-[100px]">
+          <div>
+            <img className="cursor-pointer" src="bitb.png" />
+            <p className="text-[#FFFFFF] text-[20px] font-bold mt-[50px] mb-[10px]">
+              BitBar
+            </p>
+            <p className="text-[#BABABA]">Web design</p>
+          </div>
+          <div className="mt-[80px]">
+            <img className="cursor-pointer" src="skipso.png" />
+            <p className="text-[#FFFFFF] text-[20px] font-bold mt-[50px] mb-[10px]">
+              Skipsolabs
+            </p>
+            <p className="text-[#BABABA]">Web design</p>
+          </div>
+          <div>
+            <img className="cursor-pointer" src="immplify.png" />
+            <p className="text-[#FFFFFF] text-[20px] font-bold mt-[50px] mb-[10px]">
+              Immplify
+            </p>
+            <p className="text-[#BABABA]">Web design</p>
+          </div>
+          <div className="mt-[80px]">
+            <img className="cursor-pointer" src="metaverse.png" />
+            <p className="text-[#FFFFFF] text-[20px] font-bold mt-[50px] mb-[10px]">
+              MetaPastry
+            </p>
+            <p className="text-[#BABABA]">Web design</p>
+          </div>
+        </div>
+        <div className="relative mt-[150px] flex justify-center items-center">
+          <div className="relative">
+            <a className="btn-load-more text-[#FFFFFF]">View More</a>
+            <div className="moving-dot" />
+          </div>
+        </div>
       </div>
     </motion.article>
   );
