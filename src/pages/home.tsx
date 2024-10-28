@@ -392,30 +392,30 @@ export const Home = () => {
         <div className="grid grid-cols-2 gap-x-[100px] gap-y-[40px] mt-[100px]">
           <div>
             <img className="cursor-pointer" src="bitb.png" />
-            <p className="text-[#FFFFFF] text-[20px] font-bold mt-[50px] mb-[10px]">
+            <a className="text-[#FFFFFF] the-second-link inline-block relative cursor-pointer text-[20px] font-bold mt-[50px] mb-[10px]">
               BitBar
-            </p>
+            </a>
             <p className="text-[#BABABA]">Web design</p>
           </div>
           <div className="mt-[80px]">
             <img className="cursor-pointer" src="skipso.png" />
-            <p className="text-[#FFFFFF] text-[20px] font-bold mt-[50px] mb-[10px]">
+            <a className="text-[#FFFFFF] the-second-link inline-block cursor-pointer text-[20px] font-bold mt-[50px] mb-[10px]">
               Skipsolabs
-            </p>
+            </a>
             <p className="text-[#BABABA]">Web design</p>
           </div>
           <div>
             <img className="cursor-pointer" src="immplify.png" />
-            <p className="text-[#FFFFFF] text-[20px] font-bold mt-[50px] mb-[10px]">
+            <a className="text-[#FFFFFF] the-second-link inline-block cursor-pointer text-[20px] font-bold mt-[50px] mb-[10px]">
               Immplify
-            </p>
+            </a>
             <p className="text-[#BABABA]">Web design</p>
           </div>
           <div className="mt-[80px]">
             <img className="cursor-pointer" src="metaverse.png" />
-            <p className="text-[#FFFFFF] text-[20px] font-bold mt-[50px] mb-[10px]">
+            <a className="text-[#FFFFFF] the-second-link inline-block cursor-pointer text-[20px] font-bold mt-[50px] mb-[10px]">
               MetaPastry
-            </p>
+            </a>
             <p className="text-[#BABABA]">Web design</p>
           </div>
         </div>

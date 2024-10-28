@@ -157,6 +157,25 @@ body {
   transform-origin: center; /* Set origin to center for expanding effect */
 }
 
+.the-second-link {
+  position: relative;
+}
+
+.the-second-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Position underline 6px below the text */
+  width: 0;
+  height: 1px;
+  background-color: white;
+  transition: width 0.5s ease;
+}
+
+.the-second-link:hover::after {
+  width: 100%;
+}
+ 
 /* On hover, animate underline to full width */
 .the-nav-link:hover::after {
   width: 100%;
