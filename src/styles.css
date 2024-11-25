@@ -385,7 +385,7 @@ body {
 }
 
 .sticky-nav {
-  z-index: 1000;
+  z-index: 1000000;
 }
 
 .fancy-hamburger-menu {
