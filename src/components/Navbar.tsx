@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { LogoSvg } from "./LogoSvg";
+import data from "../data.json";
 import { useNavigate, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   return (
-    <div className="flex justify-between items-center px-[46px] my-[2rem]">
+    <div className="sticky-nav flex md:flex-row flex-col justify-between items-center md:px-[46px] pb-3 md:py-0 sticky top-0 bg-white w-full">
       <motion.a
         variants={{
           hidden: { opacity: 0, y: 0 },
@@ -15,9 +15,9 @@ export const Navbar = () => {
         className="w-[5.2rem] cursor-pointer"
         onClick={() => navigate("/")}
       >
-        <LogoSvg props={{}} />
+        <img src={data?.navbar?.logo} className="rounded-full" />
       </motion.a>
-      <div className="flex gap-x-[40px] items-center">
+      <div className="flex justify-center gap-x-[10px] md:text-[20px] text-[12px] md:gap-x-[40px] items-center w-full md:w-fit">
         <motion.a
           variants={{
             hidden: { opacity: 0, y: 0 },
@@ -79,7 +79,7 @@ export const Navbar = () => {
             hidden: { opacity: 0, y: 0 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
           }}
-          className="the-nav-button font-medium cursor-pointer"
+          className="the-nav-button bg-[#141414] text-white flex justify-center h-[30px] md:h-[50px] text-[12px] px-[0.7rem] md:px-[1.4rem] items-center border border-[#141414] rounded-[32px] font-medium cursor-pointer"
           onClick={() => navigate("/start-a-project")}
         >
           Start a project

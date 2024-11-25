@@ -1,0 +1,82 @@
+{
+  "navbar": {
+    "logo": "/cooking.jpeg"
+  },
+  "heroSection": {
+    "description1": "We are a full-cycle agency that delivers turnkey projects, and by identifying the",
+    "skill1": "branding",
+    "description2": ", creating the",
+    "skill2": "web design",
+    "description3": ", and",
+    "skill3": "mobile app",
+    "description4": "we turn it into a live product.",
+    "imgUrl": "/photo.jpg",
+    "videoUrl": "https://emote.agency/wp-content/uploads/2021/04/Showreel.mp4"
+  },
+  "approachSection": {
+    "title": "Our approach",
+    "approachData": [
+      {
+        "title": "Discover",
+        "description": "We aimed to dive into the client’s project and its environment. A deep understanding of the target audience; its behaviors in the digital space; why and how this product will help is crucial before the launch.",
+        "lottie": "Study-5.json"
+      },
+      {
+        "title": "Strategise",
+        "description": "Facing the issues in understanding the market and audience could be solved within discover stage. But building the right strategy of the digital product it whole knowledge of predicting most scenarios and work on it.",
+        "lottie": "Study-3.json"
+      },
+      {
+        "title": "Structure",
+        "description": "Building the user story helps to get the most common user scenarios. Based on it we prepare user flow. So you can feel and test the roadmap before the launch. Right structure forecast right users behaviors in each step.",
+        "lottie": "Study-4.json"
+      },
+      {
+        "title": "Create",
+        "description": "Now we all set. It’s time to create and deliver the whole digital product. Main key stages passed and now every single step would be confirmed with you. This is your project and we here just to help you with it.",
+        "lottie": "Study.json"
+      }
+    ]
+  },
+  "projectSection": [
+    {
+      "title": "BitBar",
+      "type": "Web design",
+      "imgUrl": "/bitb.png",
+      "description": "BitBar is an intelligent web-based application designed to recommend books to users based on their reading history, preferences, and ratings. By utilizing advanced Natural Language Processing (NLP) and Machine Learning (ML) techniques, the system creates a personalized and seamless experience for avid readers. The project aims to make book discovery efficient, engaging, and tailored to individual tastes.",
+      "projectUrl": "https://huggingface.co/spaces/stanlys96/Phonalitics",
+      "projectGitHubUrl": "https://github.com/FTDS-assignment-bay/p2-final-project-phonalitics"
+    },
+    {
+      "title": "Skipsolabs",
+      "type": "Web design",
+      "imgUrl": "/skipso.png",
+      "description": "Skipsolabs is an intelligent web-based application designed to recommend books to users based on their reading history, preferences, and ratings. By utilizing advanced Natural Language Processing (NLP) and Machine Learning (ML) techniques, the system creates a personalized and seamless experience for avid readers. The project aims to make book discovery efficient, engaging, and tailored to individual tastes.",
+      "projectUrl": "https://huggingface.co/spaces/stanlys96/Phonalitics",
+      "projectGitHubUrl": "https://github.com/FTDS-assignment-bay/p2-final-project-phonalitics"
+    },
+    {
+      "title": "Immplify",
+      "type": "Web design",
+      "imgUrl": "/immplify.png",
+      "description": "Immplify is an intelligent web-based application designed to recommend books to users based on their reading history, preferences, and ratings. By utilizing advanced Natural Language Processing (NLP) and Machine Learning (ML) techniques, the system creates a personalized and seamless experience for avid readers. The project aims to make book discovery efficient, engaging, and tailored to individual tastes.",
+      "projectUrl": "https://huggingface.co/spaces/stanlys96/Phonalitics",
+      "projectGitHubUrl": "https://github.com/FTDS-assignment-bay/p2-final-project-phonalitics"
+    },
+    {
+      "title": "MetaPastry",
+      "type": "Web design",
+      "imgUrl": "/metaverse.png",
+      "description": "MetaPastry is an intelligent web-based application designed to recommend books to users based on their reading history, preferences, and ratings. By utilizing advanced Natural Language Processing (NLP) and Machine Learning (ML) techniques, the system creates a personalized and seamless experience for avid readers. The project aims to make book discovery efficient, engaging, and tailored to individual tastes.",
+      "projectUrl": "https://huggingface.co/spaces/stanlys96/Phonalitics",
+      "projectGitHubUrl": "https://github.com/FTDS-assignment-bay/p2-final-project-phonalitics"
+    }
+  ],
+  "passionateSection": {
+    "lottie": "Work.json",
+    "title": "We are passionate",
+    "description1": "Overcoming expectations is our mission. We’re here to follow your vision and extend it into one consistent product. You got all according to our agreement, and some more.",
+    "description2": "The process based on a customer-centric approach. Nowadays brand communication should be something that people really want to be involved in. Understanding and vibing your audience is what we’re here for.",
+    "description3": "It may be not easy and time-consuming, but we don’t look for short ways. We’re lordly of our mission and it’s this attitude that defines us."
+  }
+}
