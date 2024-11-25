@@ -43,15 +43,15 @@ body {
 
 @keyframes movingDot {
   from {
-      -webkit-transform: rotate(120deg) translate(-102px) rotate(120deg);
-      transform: rotate(120deg) translate(-102px) rotate(120deg);
-      will-change: transform
+    -webkit-transform: rotate(120deg) translate(-102px) rotate(120deg);
+    transform: rotate(120deg) translate(-102px) rotate(120deg);
+    will-change: transform;
   }
 
   to {
-      -webkit-transform: rotate(480deg) translate(-102px) rotate(-480deg);
-      transform: rotate(480deg) translate(-102px) rotate(-480deg);
-      will-change: transform
+    -webkit-transform: rotate(480deg) translate(-102px) rotate(-480deg);
+    transform: rotate(480deg) translate(-102px) rotate(-480deg);
+    will-change: transform;
   }
 }
 
@@ -68,7 +68,7 @@ body {
   top: 92px;
   left: 92px;
   -webkit-animation: movingDot 3.5s infinite linear;
-  animation: movingDot 3.5s infinite linear
+  animation: movingDot 3.5s infinite linear;
 }
 
 .btn-load-more {
@@ -83,7 +83,7 @@ body {
   background-color: transparent;
   border: 1px solid #e4e4e4;
   border-radius: 50%;
-  color: #FFFFFF;
+  color: #ffffff;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -96,17 +96,18 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   position: relative;
-  -webkit-transition: color .4s ease-in-out,-webkit-filter .4s ease-in-out;
-  transition: color .4s ease-in-out,-webkit-filter .4s ease-in-out;
-  -o-transition: filter .4s ease-in-out,color .4s ease-in-out;
-  transition: filter .4s ease-in-out,color .4s ease-in-out;
-  transition: filter .4s ease-in-out,color .4s ease-in-out,-webkit-filter .4s ease-in-out;
+  -webkit-transition: color 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
+  -o-transition: filter 0.4s ease-in-out, color 0.4s ease-in-out;
+  transition: filter 0.4s ease-in-out, color 0.4s ease-in-out;
+  transition: filter 0.4s ease-in-out, color 0.4s ease-in-out,
+    -webkit-filter 0.4s ease-in-out;
   width: 204px;
 }
 
 .the-nav-button {
   font-weight: 500;
-  transition: background-color ease .55s,color ease .35s,border ease .55s;
+  transition: background-color ease 0.55s, color ease 0.35s, border ease 0.55s;
   text-align: center;
 }
 
@@ -164,7 +165,7 @@ body {
 .the-second-link:hover::after {
   width: 100%;
 }
- 
+
 /* On hover, animate underline to full width */
 .the-nav-link:hover::after {
   width: 100%;
@@ -232,7 +233,7 @@ body {
   align-items: center;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  background-color: rgba(255,255,255,.3);
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -244,27 +245,30 @@ body {
   justify-content: center;
   height: 9.5rem;
   opacity: 0;
-  -webkit-transition: opacity .7s,-webkit-transform .35s,-webkit-backdrop-filter .35s;
-  transition: opacity .7s,-webkit-transform .35s,-webkit-backdrop-filter .35s;
-  -o-transition: opacity .7s,transform .35s,backdrop-filter .35s;
-  transition: opacity .7s,transform .35s,backdrop-filter .35s;
-  transition: opacity .7s,transform .35s,backdrop-filter .35s,-webkit-transform .35s,-webkit-backdrop-filter .35s;
+  -webkit-transition: opacity 0.7s, -webkit-transform 0.35s,
+    -webkit-backdrop-filter 0.35s;
+  transition: opacity 0.7s, -webkit-transform 0.35s,
+    -webkit-backdrop-filter 0.35s;
+  -o-transition: opacity 0.7s, transform 0.35s, backdrop-filter 0.35s;
+  transition: opacity 0.7s, transform 0.35s, backdrop-filter 0.35s;
+  transition: opacity 0.7s, transform 0.35s, backdrop-filter 0.35s,
+    -webkit-transform 0.35s, -webkit-backdrop-filter 0.35s;
   position: absolute;
   width: 9.5rem;
   z-index: 10000;
 }
-.icon-triangle{
-  border-style:solid;
-  border-width:12px 0 12px 20px;
-  border-color:transparent transparent transparent #141414;
-  margin-left:7px;
-  height:50px;
-  -webkit-transition:-webkit-transform .35s;
-  transition:-webkit-transform .35s;
-  -o-transition:transform .35s;
-  transition:transform .35s;
-  transition:transform .35s,-webkit-transform .35s;
-  width: 50px ;
+.icon-triangle {
+  border-style: solid;
+  border-width: 12px 0 12px 20px;
+  border-color: transparent transparent transparent #141414;
+  margin-left: 7px;
+  height: 50px;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: -webkit-transform 0.35s;
+  -o-transition: transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
+  width: 50px;
 }
 
 .the-approach-link {
@@ -352,7 +356,7 @@ body {
   font-size: 16px;
   font-weight: 500;
   padding: 0 1.4rem;
-  transition: background-color ease .55s,color ease .35s,border ease .55s;
+  transition: background-color ease 0.55s, color ease 0.35s, border ease 0.55s;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -374,7 +378,7 @@ body {
   font-size: 16px;
   font-weight: 500;
   padding: 0 1.4rem;
-  transition: background-color ease .55s,color ease .35s,border ease .55s;
+  transition: background-color ease 0.55s, color ease 0.35s, border ease 0.55s;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -382,4 +386,75 @@ body {
 
 .sticky-nav {
   z-index: 1000;
+}
+
+.fancy-hamburger-menu {
+  position: relative;
+  z-index: 10;
+}
+
+.hamburger-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  z-index: 100000;
+}
+
+.line {
+  width: 100%;
+  height: 5px;
+  background-color: #000;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.line-open {
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* transform: translate(-10%, -10%); */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* border-radius: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 1000;
+  text-align: center;
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-items li {
+  margin: 20px 0;
+}
+
+.menu-items a {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  text-decoration: underline;
+}
+
+.menu-items a:hover {
+  color: #f39c12;
 }

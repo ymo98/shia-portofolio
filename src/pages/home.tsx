@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Navbar } from "../components/Navbar";
 import Lottie from "lottie-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Modal, Carousel } from "antd";
 import data from "../data.json";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
@@ -16,7 +16,7 @@ const CustomPrevArrow = ({ onClick, show }: Props) => {
   return (
     <div
       onClick={onClick}
-      className="absolute sticky-nav left-4 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-3 shadow-lg cursor-pointer"
+      className="absolute sticky-nav left-4 top-0 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-3 shadow-lg cursor-pointer"
     >
       <LeftOutlined style={{ fontSize: "24px" }} />
     </div>
@@ -28,7 +28,7 @@ const CustomNextArrow = ({ onClick, show }: Props) => {
   return (
     <div
       onClick={onClick}
-      className="absolute sticky-nav right-4 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-3 shadow-lg cursor-pointer"
+      className="absolute sticky-nav right-4 top-0 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-3 shadow-lg cursor-pointer"
     >
       <RightOutlined style={{ fontSize: "24px" }} />
     </div>
@@ -37,7 +37,12 @@ const CustomNextArrow = ({ onClick, show }: Props) => {
 
 export const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentApproach, setCurrentApproach] = useState<any>("Discover");
+  const [currentApproach, setCurrentApproach] = useState<any>(
+    data?.approachSection?.approachData?.[0]?.title
+  );
+  const [currentLottie, setCurrentLottie] = useState<any>(
+    data?.approachSection?.approachData?.[0]?.lottie
+  );
   const [currentCategory, setCurrentCategory] = useState<
     "All" | "Web design" | "Mobile app" | "Branding"
   >("All");
@@ -46,6 +51,7 @@ export const Home = () => {
     visible: { scale: 1, opacity: 1 }, // Visible state
     exit: { scale: 0, opacity: 0 }, // Exit state
   };
+
   const [currentProject, setCurrentProject] = useState<any>();
   const showModal = () => {
     setIsModalOpen(true);
@@ -64,6 +70,8 @@ export const Home = () => {
 
   const handleBeforeChange = (currentSlide: any, nextSlide: any) => {
     setCurrent(nextSlide);
+    setCurrentApproach(data?.approachSection?.approachData?.[nextSlide]?.title);
+    setCurrentLottie(data?.approachSection?.approachData?.[nextSlide]?.lottie);
   };
   return (
     <motion.article
@@ -181,18 +189,9 @@ export const Home = () => {
           <p className="font-bold  text-[28px] lg:text-left text-center lg:text-[56px] mb-[10px] lg:mb-[50px]">
             {data?.approachSection?.title}
           </p>
-          <Carousel
-            beforeChange={handleBeforeChange}
-            rootClassName="lg:hidden block"
-            dots={false}
-            arrows
-            infinite={false}
-            prevArrow={<CustomPrevArrow onClick show={current > 0} />}
-            nextArrow={
-              <CustomNextArrow onClick show={current < totalSlides - 1} />
-            }
-          >
-            {data?.approachSection?.approachData?.map((approach) => (
+
+          <div className="relative">
+            <AnimatePresence mode="wait">
               <motion.div
                 key={currentApproach}
                 variants={variants} // Use variants for inner div
@@ -200,22 +199,40 @@ export const Home = () => {
                 animate="visible" // Animate to visible state
                 exit="exit" // Exit state
                 transition={{ duration: 0.5 }} // Transition duration
-                className="flex justify-center items-center"
               >
                 {
                   <Lottie
-                    animationData={require(`../lottie/${approach?.lottie}`)}
+                    animationData={require(`../lottie/${currentLottie}`)}
                   />
                 }
-                <p
-                  className={`text-black my-5 text-center the-current-approach text-[26px] font-semibold`}
-                >
-                  {approach?.title}
-                </p>
-                <p className="text-center">{approach?.description}</p>
               </motion.div>
-            ))}
-          </Carousel>
+            </AnimatePresence>
+            <Carousel
+              beforeChange={handleBeforeChange}
+              rootClassName="lg:hidden block"
+              dots={false}
+              arrows
+              infinite={false}
+              prevArrow={<CustomPrevArrow onClick show={current > 0} />}
+              nextArrow={
+                <CustomNextArrow onClick show={current < totalSlides - 1} />
+              }
+            >
+              {data?.approachSection?.approachData?.map((approach) => (
+                <div
+                  key={currentApproach}
+                  className="flex justify-center items-center"
+                >
+                  <p
+                    className={`text-black my-5 text-center the-current-approach text-[26px] font-semibold`}
+                  >
+                    {approach?.title}
+                  </p>
+                  <p className="text-center">{approach?.description}</p>
+                </div>
+              ))}
+            </Carousel>
+          </div>
           <div className="flex flex-1 items-center lg:flex hidden">
             <div className="w-[500px] h-[400px] lg:mr-[75px] flex justify-center items-center">
               <AnimatePresence mode="wait">

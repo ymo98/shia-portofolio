@@ -1,6 +1,29 @@
 {
   "navbar": {
-    "logo": "/cooking.jpeg"
+    "logo": "/cooking.jpeg",
+    "links": [
+      {
+        "title": "Our work",
+        "url": "/our-work"
+      },
+      {
+        "title": "Services",
+        "url": "/services"
+      },
+      {
+        "title": "Faq",
+        "url": "/faq"
+      },
+      {
+        "title": "About us",
+        "url": "/about-us"
+      },
+      {
+        "title": "Start a project",
+        "url": "/start-a-project",
+        "special": true
+      }
+    ]
   },
   "heroSection": {
     "description1": "We are a full-cycle agency that delivers turnkey projects, and by identifying the",
