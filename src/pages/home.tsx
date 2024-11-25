@@ -2,8 +2,38 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Navbar } from "../components/Navbar";
 import Lottie from "lottie-react";
 import { useState } from "react";
-import { Modal } from "antd";
+import { Modal, Carousel } from "antd";
 import data from "../data.json";
+import { LeftOutlined, RightOutlined } from "@ant-design/icons";
+
+interface Props {
+  onClick: any;
+  show: boolean;
+}
+
+const CustomPrevArrow = ({ onClick, show }: Props) => {
+  if (!show) return null;
+  return (
+    <div
+      onClick={onClick}
+      className="absolute sticky-nav left-4 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-3 shadow-lg cursor-pointer"
+    >
+      <LeftOutlined style={{ fontSize: "24px" }} />
+    </div>
+  );
+};
+
+const CustomNextArrow = ({ onClick, show }: Props) => {
+  if (!show) return null;
+  return (
+    <div
+      onClick={onClick}
+      className="absolute sticky-nav right-4 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-3 shadow-lg cursor-pointer"
+    >
+      <RightOutlined style={{ fontSize: "24px" }} />
+    </div>
+  );
+};
 
 export const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -27,6 +57,13 @@ export const Home = () => {
 
   const handleCancel = () => {
     setIsModalOpen(false);
+  };
+
+  const [current, setCurrent] = useState(0);
+  const totalSlides = data?.approachSection?.approachData?.length;
+
+  const handleBeforeChange = (currentSlide: any, nextSlide: any) => {
+    setCurrent(nextSlide);
   };
   return (
     <motion.article
@@ -139,13 +176,48 @@ export const Home = () => {
           Your browser does not support the video tag.
         </video>
       </motion.div>
-      <div className="my-[5rem] px-[20px] md:px-[118px]">
+      <div className="my-[5rem] px-[10px] lg:px-[118px]">
         <div>
-          <p className="font-bold text-[28px] md:text-left text-center md:text-[56px] mb-[10px] md:mb-[50px]">
+          <p className="font-bold  text-[28px] lg:text-left text-center lg:text-[56px] mb-[10px] lg:mb-[50px]">
             {data?.approachSection?.title}
           </p>
-          <div className="flex flex-1 items-center">
-            <div className="w-[500px] h-[400px] md:mr-[75px] flex justify-center items-center">
+          <Carousel
+            beforeChange={handleBeforeChange}
+            rootClassName="lg:hidden block"
+            dots={false}
+            arrows
+            infinite={false}
+            prevArrow={<CustomPrevArrow onClick show={current > 0} />}
+            nextArrow={
+              <CustomNextArrow onClick show={current < totalSlides - 1} />
+            }
+          >
+            {data?.approachSection?.approachData?.map((approach) => (
+              <motion.div
+                key={currentApproach}
+                variants={variants} // Use variants for inner div
+                initial="hidden" // Initial state
+                animate="visible" // Animate to visible state
+                exit="exit" // Exit state
+                transition={{ duration: 0.5 }} // Transition duration
+                className="flex justify-center items-center"
+              >
+                {
+                  <Lottie
+                    animationData={require(`../lottie/${approach?.lottie}`)}
+                  />
+                }
+                <p
+                  className={`text-black my-5 text-center the-current-approach text-[26px] font-semibold`}
+                >
+                  {approach?.title}
+                </p>
+                <p className="text-center">{approach?.description}</p>
+              </motion.div>
+            ))}
+          </Carousel>
+          <div className="flex flex-1 items-center lg:flex hidden">
+            <div className="w-[500px] h-[400px] lg:mr-[75px] flex justify-center items-center">
               <AnimatePresence mode="wait">
                 {data?.approachSection?.approachData?.map(
                   (approach) =>
