@@ -16,7 +16,7 @@ const CustomPrevArrow = ({ onClick, show }: Props) => {
   return (
     <div
       onClick={onClick}
-      className="absolute sticky-nav left-4 top-0 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-3 shadow-lg cursor-pointer"
+      className="absolute the-arrow z-500 left-4 top-0 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-3 shadow-lg cursor-pointer"
     >
       <LeftOutlined style={{ fontSize: "24px" }} />
     </div>
@@ -28,7 +28,7 @@ const CustomNextArrow = ({ onClick, show }: Props) => {
   return (
     <div
       onClick={onClick}
-      className="absolute sticky-nav right-4 top-0 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-3 shadow-lg cursor-pointer"
+      className="absolute the-arrow z-500 right-4 top-0 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-3 shadow-lg cursor-pointer"
     >
       <RightOutlined style={{ fontSize: "24px" }} />
     </div>

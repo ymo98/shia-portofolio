@@ -458,3 +458,7 @@ body {
 .menu-items a:hover {
   color: #f39c12;
 }
+
+.the-arrow {
+  z-index: 500;
+}
