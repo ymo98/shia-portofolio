@@ -12,7 +12,13 @@ const FancyHamburgerMenu = () => {
   };
 
   return (
-    <div className="block md:hidden fancy-hamburger-menu">
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 0 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+      }}
+      className="block md:hidden fancy-hamburger-menu"
+    >
       {/* Hamburger Icon */}
       <motion.div
         className="hamburger-icon"
@@ -55,7 +61,7 @@ const FancyHamburgerMenu = () => {
           ))}
         </ul>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 
