@@ -199,7 +199,7 @@ export const Home = () => {
                 initial="hidden" // Initial state
                 animate="visible" // Animate to visible state
                 exit="exit" // Exit state
-                transition={{ duration: 0.5 }} // Transition duration
+                transition={{ duration: 0.2 }} // Transition duration
               >
                 {
                   <Lottie
