@@ -193,7 +193,7 @@ export const Home = () => {
           <div className="relative">
             <AnimatePresence mode="wait">
               <motion.div
-                className="block md:hidden"
+                className="block lg:hidden"
                 key={currentApproach}
                 variants={variants} // Use variants for inner div
                 initial="hidden" // Initial state
