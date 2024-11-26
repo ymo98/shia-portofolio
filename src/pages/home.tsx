@@ -201,11 +201,7 @@ export const Home = () => {
                 exit="exit" // Exit state
                 transition={{ duration: 0.2 }} // Transition duration
               >
-                {
-                  <Lottie
-                    animationData={require(`../lottie/${currentLottie}`)}
-                  />
-                }
+                <Lottie animationData={require(`../lottie/${currentLottie}`)} />
               </motion.div>
             </AnimatePresence>
             <Carousel
