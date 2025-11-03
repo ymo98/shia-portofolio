@@ -29,7 +29,7 @@ export default function AboutUs() {
           className="leading-relaxed text-lg text-gray-700 space-y-4"
         >
           <span className="block mb-4">
-            Hi, I’m <strong>Yocia</strong> — a tech recruiter, AI & data
+            Hi, I’m <strong>Yocia</strong> a tech recruiter, AI & data
             enthusiast, and aspiring to be creative builder myself.
           </span>
 
