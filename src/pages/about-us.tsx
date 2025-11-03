@@ -35,8 +35,7 @@ export default function AboutUs() {
 
           <span className="block mb-4">
             In my day job, I connect people and ideas, helping bring innovation
-            to life and make it something that truly works in the real world.
-            Through my work, I’ve built connections with AI, Machine
+            to life.Through my work, I’ve built connections with AI, Machine
             Learning, and Data engineers, which inspired me to explore the field
             myself. I love discovering how data can drive smarter, more meaningful
             decisions.
