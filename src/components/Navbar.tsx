@@ -17,7 +17,11 @@ export const Navbar = () => {
           className="w-[5.2rem] cursor-pointer"
           onClick={() => navigate("/")}
         >
-          <img src={data?.navbar?.logo} className="rounded-full" />
+          <img
+            src={data?.navbar?.logo}
+            alt="logo"
+            className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border border-gray-200 shadow-sm hover:scale-105 transition-transform duration-300"
+          />
         </motion.a>
         <FancyHamburgerMenu />
       </div>

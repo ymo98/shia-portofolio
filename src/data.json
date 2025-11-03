@@ -1,7 +1,11 @@
 {
   "navbar": {
-    "logo": "/cooking.jpeg",
+    "logo": "/me.jpg",
     "links": [
+      {
+        "title": "About Me",
+        "url": "/about-me"
+      },
       {
         "title": "Our work",
         "url": "/our-work"
@@ -15,10 +19,6 @@
         "url": "/faq"
       },
       {
-        "title": "About us",
-        "url": "/about-us"
-      },
-      {
         "title": "Start a project",
         "url": "/start-a-project",
         "special": true
@@ -26,15 +26,14 @@
     ]
   },
   "heroSection": {
-    "description1": "We are a full-cycle agency that delivers turnkey projects, and by identifying the",
-    "skill1": "branding",
-    "description2": ", creating the",
-    "skill2": "web design",
-    "description3": ", and",
-    "skill3": "mobile app",
-    "description4": "we turn it into a live product.",
-    "imgUrl": "/photo.jpg",
-    "videoUrl": "https://emote.agency/wp-content/uploads/2021/04/Showreel.mp4"
+    "description1": "Hey! Thanks for dropping by! I’m an aspiring",
+    "skill1": "Data Scientist",
+    "description2": "currently building my portfolio and learning as I go. This portofolio is still a work in progress, but I plan to update it every week.",
+    "skill2": "",
+    "description3": "If you’d like to know more about me, go to the",
+    "skill3": "About Me",
+    "description4": "section. Thanks for visiting!",
+    "imgUrl": "/me.jpg"
   },
   "approachSection": {
     "title": "Our approach",

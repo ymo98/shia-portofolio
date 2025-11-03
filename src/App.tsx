@@ -21,7 +21,7 @@ export default function App() {
       element: <Services />,
     },
     {
-      path: "/about-us",
+      path: "/about-me",
       element: <AboutUs />,
     },
     {

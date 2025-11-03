@@ -173,16 +173,6 @@ export const Home = () => {
         <button className="btn-video-play">
           <i className="icon-triangle" />
         </button>
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{ width: "100%", height: "auto" }} // Adjust styles as needed
-        >
-          <source src={data?.heroSection?.videoUrl} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
       </motion.div>
       <div className="my-[5rem] px-[10px] lg:px-[118px]">
         <div>
